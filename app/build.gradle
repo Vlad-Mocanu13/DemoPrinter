@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+
+
+    defaultConfig {
+        applicationId "custom.api.android.demo.usb"
+        minSdkVersion 19
+        targetSdkVersion 26
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    dependencies {
+        implementation files('libs/customandroidapi.jar')
+    }
+}
